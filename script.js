@@ -20,3 +20,34 @@ window.addEventListener('resize', () => {
     hamburgerIcon.classList.replace('fa-xmark', 'fa-bars');
   }
 });
+
+// SPUSTENIE TEXTU H1 PO NACITANI STRANKY
+
+const heading = document.querySelector('.welcome-heading');
+
+if (heading) {
+  const text = 'Welcome to the world of unicorns!';
+
+  let index = 0;
+
+  const displayText = () => {
+    if (index < text.length) {
+      heading.textContent += text.charAt(index);
+      index++;
+      setTimeout(displayText, 150); // Zpoždění e.g. 100ms mezi písmeny
+    }
+  };
+
+  displayText(); // Spustíme funkci při načtení stránky
+}
+// FLYING IMAGE - OBRAZEK POLETI NAHORE NA STRANKE ABOUT-US
+
+const flyingImage = document.querySelector('.flying-image');
+
+flyingImage.addEventListener('click', () => {
+  flyingImage.style.transform = 'translateY(-70vh)';
+});
+
+flyingImage.addEventListener('mouseout', () => {
+  flyingImage.style.transform = 'translateY(0)';
+});

@@ -7,6 +7,7 @@
 :root {
   --font-paleblack: #111;
   --background-pink: #f0d4db;
+  --white: whitesmoke;
 }
 
 /* HEADER */
@@ -55,4 +56,54 @@ nav li a {
   min-height: calc(100vh - 70px);
   background-size: cover;
   background-position: center;
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+/* HEADING  */
+.welcome-heading {
+  font-size: 24px;
+  text-transform: lowercase;
+  padding-bottom: 50px;
+  font-family: 'Inconsolata', monospace;
+  letter-spacing: 0.4rem;
+}
+
+
+/****************** ABOUT US ***********************/
+
+
+/*  #e37c89, #f8a531, #ad8bcf, #df8cb7*/
+
+.main-aboutus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: calc(100vh - 70px);
+}
+
+.button-aboutus__unicorn {
+  background: linear-gradient(90deg, #6599f4, #80ae34, #fbe271);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid var(--font-paleblack);
+  color: var(--font-paleblack);
+  font-family: 'Inconsolata', monospace;
+  letter-spacing: 0.1px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 0;
+  margin-bottom: 70px;
+}
+
+
+.flying-image {
+  width: 300px;
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: transform 5s ease-in;
 }
