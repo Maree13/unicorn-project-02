@@ -23,20 +23,30 @@ window.addEventListener('resize', () => {
 
 // SPUSTENIE TEXTU H1 PO NACITANI STRANKY
 
-// let textTimeout;
+let textTimeout; // globalna premenna na uchovanie referencie na setTimeOut
 
 const textUniversalFunction = (element, headingText) => {
   let index = 0;
+  element.textContent = ''; // posledny pokus - vymaze text
 
   const displayText = () => {
     if (index < headingText.length) {
       element.textContent += headingText.charAt(index);
       index++;
-      setTimeout(displayText, 150); // Zpoždění e.g. 100ms mezi písmeny
+      textTimeout = setTimeout(displayText, 150); // Zpoždění e.g. 100ms mezi písmeny
     }
   };
 
   displayText(); // Spusti funkciu pri načtení stránky
+};
+
+// posledny pokus - pridavam stopku
+
+const stopTextAnimation = () => {
+  if (textTimeout) {
+    clearTimeout(textTimeout); // zastavi beziaci casovac
+    textTimeout = null; // Nastavte textTimeout na null po zastavení
+  }
 };
 
 const heading = document.querySelector('.heading-welcome');
@@ -73,10 +83,8 @@ const mainAboutus = document.querySelector('.main-aboutus');
 
 if (buttonUnicorn) {
   buttonUnicorn.addEventListener('click', () => {
+    stopTextAnimation(); // zastavi animaci textu
     buttonUnicorn.classList.toggle('button-aboutus__light');
-
-    // clearTimeOut(textTimeout);
-    // aboutusHeading.textContent = '';
 
     if (buttonUnicorn.classList.contains('button-aboutus__light')) {
       buttonUnicorn.textContent = 'Light mode';
