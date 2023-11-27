@@ -9,6 +9,8 @@
   --background-pink: #f0d4db;
   --white: whitesmoke;
   --yellow-sun: #fff936;
+  --pink-hover: #fe80d5;
+  --orange-hover: #ffb306;
 }
 
 /* HEADER */
@@ -102,6 +104,10 @@ nav li a {
   margin-bottom: 70px;
 }
 
+.button-aboutus__unicorn:hover {
+  background-color: #fe80d5;
+}
+
 .button-aboutus__unicorn.button-aboutus__light {
   background-color: var(--yellow-sun);
 }
@@ -111,4 +117,13 @@ nav li a {
   margin-bottom: 0;
   cursor: pointer;
   transition: transform 6s ease-in;
+}
+
+.aboutus-heading {
+  color: var(--font-paleblack);
+  font-size: 24px;
+  text-transform: lowercase;
+  padding-bottom: 50px;
+  font-family: 'Inconsolata', monospace;
+  letter-spacing: 0.4rem;
 }

@@ -23,23 +23,35 @@ window.addEventListener('resize', () => {
 
 // SPUSTENIE TEXTU H1 PO NACITANI STRANKY
 
-const heading = document.querySelector('.heading-welcome');
+// let textTimeout;
 
-if (heading) {
-  const text = 'Welcome to the world of unicorns!';
-
+const textUniversalFunction = (element, headingText) => {
   let index = 0;
 
   const displayText = () => {
-    if (index < text.length) {
-      heading.textContent += text.charAt(index);
+    if (index < headingText.length) {
+      element.textContent += headingText.charAt(index);
       index++;
       setTimeout(displayText, 150); // Zpoždění e.g. 100ms mezi písmeny
     }
   };
 
-  displayText(); // Spustíme funkci při načtení stránky
+  displayText(); // Spusti funkciu pri načtení stránky
+};
+
+const heading = document.querySelector('.heading-welcome');
+if (heading) {
+  textUniversalFunction(heading, 'Welcome to the world of unicorns!');
 }
+
+const aboutusHeading = document.querySelector('.aboutus-heading'); // pridavam druhy heading
+if (aboutusHeading) {
+  textUniversalFunction(
+    aboutusHeading,
+    'Hi, wanna fly with me? Click on the red baloon!',
+  );
+}
+
 // FLYING IMAGE - OBRAZEK POLETI NAHORE NA STRANKE ABOUT-US
 
 const flyingImage = document.querySelector('.flying-image');
@@ -57,17 +69,26 @@ if (flyingImage) {
 // ZMENA CLASSY NA BUTTON V ABOUT US - DARK / LIGHT MODE
 
 const buttonUnicorn = document.querySelector('.button-aboutus__unicorn');
-console.log(buttonUnicorn);
 const mainAboutus = document.querySelector('.main-aboutus');
 
-buttonUnicorn.addEventListener('click', () => {
-  buttonUnicorn.classList.toggle('button-aboutus__light');
+if (buttonUnicorn) {
+  buttonUnicorn.addEventListener('click', () => {
+    buttonUnicorn.classList.toggle('button-aboutus__light');
 
-  if (buttonUnicorn.classList.contains('button-aboutus__light')) {
-    buttonUnicorn.textContent = 'Light mode';
-    mainAboutus.style.background = '#111';
-  } else {
-    buttonUnicorn.textContent = 'Unicorn mode';
-    mainAboutus.style.backgroundColor = 'whitesmoke';
-  }
-});
+    // clearTimeOut(textTimeout);
+    // aboutusHeading.textContent = '';
+
+    if (buttonUnicorn.classList.contains('button-aboutus__light')) {
+      buttonUnicorn.textContent = 'Light mode';
+      mainAboutus.style.background = '#111';
+      aboutusHeading.style.color = 'whitesmoke';
+      aboutusHeading.textContent = 'we are flying to the moon!';
+    } else {
+      buttonUnicorn.textContent = 'Unicorn mode';
+      mainAboutus.style.backgroundColor = 'whitesmoke';
+      aboutusHeading.style.color = '#111';
+      aboutusHeading.textContent =
+        'Hi, wanna fly with me? Click on the red baloon!';
+    }
+  });
+}
