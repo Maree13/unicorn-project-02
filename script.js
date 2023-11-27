@@ -23,7 +23,7 @@ window.addEventListener('resize', () => {
 
 // SPUSTENIE TEXTU H1 PO NACITANI STRANKY
 
-const heading = document.querySelector('.welcome-heading');
+const heading = document.querySelector('.heading-welcome');
 
 if (heading) {
   const text = 'Welcome to the world of unicorns!';
@@ -44,10 +44,27 @@ if (heading) {
 
 const flyingImage = document.querySelector('.flying-image');
 
-flyingImage.addEventListener('click', () => {
-  flyingImage.style.transform = 'translateY(-70vh)';
-});
+if (flyingImage) {
+  flyingImage.addEventListener('click', () => {
+    flyingImage.style.transform = 'translateY(-100vh)';
 
-flyingImage.addEventListener('mouseout', () => {
-  flyingImage.style.transform = 'translateY(0)';
+    setTimeout(() => {
+      flyingImage.style.transform = 'translateY(0)';
+    }, 5000);
+  });
+}
+
+// ZMENA CLASSY NA BUTTON V ABOUT US
+
+const buttonUnicorn = document.querySelector('.button-aboutus__unicorn');
+console.log(buttonUnicorn);
+
+buttonUnicorn.addEventListener('click', () => {
+  buttonUnicorn.classList.toggle('button-aboutus__light');
+
+  if (buttonUnicorn.classList.contains('button-aboutus__light')) {
+    buttonUnicorn.textContent = 'Light mode';
+  } else {
+    buttonUnicorn.textContent = 'Unicorn mode';
+  }
 });

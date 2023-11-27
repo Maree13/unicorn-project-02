@@ -63,7 +63,7 @@ nav li a {
 }
 
 /* HEADING  */
-.welcome-heading {
+.heading-welcome {
   font-size: 24px;
   text-transform: lowercase;
   padding-bottom: 50px;
@@ -86,7 +86,8 @@ nav li a {
 }
 
 .button-aboutus__unicorn {
-  background: linear-gradient(90deg, #6599f4, #80ae34, #fbe271);
+  /* background: linear-gradient(90deg, #6599f4, #80ae34, #fbe271); */
+  background-color: var(--background-pink);
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -100,6 +101,9 @@ nav li a {
   margin-bottom: 70px;
 }
 
+.button-aboutus__unicorn.button-aboutus__light {
+  background-color: var(--white);
+}
 
 .flying-image {
   width: 300px;
