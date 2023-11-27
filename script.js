@@ -50,11 +50,11 @@ if (flyingImage) {
 
     setTimeout(() => {
       flyingImage.style.transform = 'translateY(0)';
-    }, 5000);
+    }, 6000);
   });
 }
 
-// ZMENA CLASSY NA BUTTON V ABOUT US
+// ZMENA CLASSY NA BUTTON V ABOUT US - DARK / LIGHT MODE
 
 const buttonUnicorn = document.querySelector('.button-aboutus__unicorn');
 console.log(buttonUnicorn);
@@ -65,10 +65,9 @@ buttonUnicorn.addEventListener('click', () => {
 
   if (buttonUnicorn.classList.contains('button-aboutus__light')) {
     buttonUnicorn.textContent = 'Light mode';
-
     mainAboutus.style.background = '#111';
   } else {
     buttonUnicorn.textContent = 'Unicorn mode';
-    mainAboutus.style.background = 'whitesmoke';
+    mainAboutus.style.backgroundColor = 'whitesmoke';
   }
 });

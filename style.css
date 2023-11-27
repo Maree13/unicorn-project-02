@@ -8,6 +8,7 @@
   --font-paleblack: #111;
   --background-pink: #f0d4db;
   --white: whitesmoke;
+  --yellow-sun: #fff936;
 }
 
 /* HEADER */
@@ -102,12 +103,12 @@ nav li a {
 }
 
 .button-aboutus__unicorn.button-aboutus__light {
-  background-color: var(--white);
+  background-color: var(--yellow-sun);
 }
 
 .flying-image {
   width: 300px;
   margin-bottom: 0;
   cursor: pointer;
-  transition: transform 5s ease-in;
+  transition: transform 6s ease-in;
 }
