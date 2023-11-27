@@ -92,7 +92,7 @@ if (buttonUnicorn) {
       aboutusHeading.style.color = 'whitesmoke';
       aboutusHeading.textContent = 'we are flying to the moon!';
     } else {
-      buttonUnicorn.textContent = 'Unicorn mode';
+      buttonUnicorn.textContent = 'Dark mode';
       mainAboutus.style.backgroundColor = 'whitesmoke';
       aboutusHeading.style.color = '#111';
       aboutusHeading.textContent =
