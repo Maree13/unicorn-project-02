@@ -58,13 +58,17 @@ if (flyingImage) {
 
 const buttonUnicorn = document.querySelector('.button-aboutus__unicorn');
 console.log(buttonUnicorn);
+const mainAboutus = document.querySelector('.main-aboutus');
 
 buttonUnicorn.addEventListener('click', () => {
   buttonUnicorn.classList.toggle('button-aboutus__light');
 
   if (buttonUnicorn.classList.contains('button-aboutus__light')) {
     buttonUnicorn.textContent = 'Light mode';
+
+    mainAboutus.style.background = '#111';
   } else {
     buttonUnicorn.textContent = 'Unicorn mode';
+    mainAboutus.style.background = 'whitesmoke';
   }
 });
