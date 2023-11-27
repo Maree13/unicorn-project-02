@@ -130,6 +130,15 @@ nav li a {
   text-align: center;
 }
 
+
+/**************** CONTACT ****************/
+
+
+.main-contact {
+  min-height: calc(100vh - 70px);
+}
+
+
 .contact-heading {
   color: var(--font-paleblack);
   font-size: 24px;
@@ -137,6 +146,6 @@ nav li a {
   padding-bottom: 50px;
   font-family: 'Inconsolata', monospace;
   letter-spacing: 0.4rem;
-  margin: 50% 30px 50px 30px;
+  margin: 250px 30px;
   text-align: center;
 }

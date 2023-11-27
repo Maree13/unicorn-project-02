@@ -29,7 +29,8 @@
     letter-spacing: 0.2rem;
   }
 
-  .aboutus-heading {
+  .aboutus-heading,
+  .contact-heading {
     font-size: 18px;
     letter-spacing: 0.2rem;
   }
