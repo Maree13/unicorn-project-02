@@ -75,6 +75,8 @@ nav li a:hover {
   font-size: 24px;
   text-transform: lowercase;
   padding-bottom: 50px;
+  margin-left: 30px;
+  margin-right: 30px;
   font-family: 'Inconsolata', monospace;
   letter-spacing: 0.4rem;
 }
@@ -152,7 +154,7 @@ nav li a:hover {
   text-transform: lowercase;
   font-family: 'Inconsolata', monospace;
   letter-spacing: 0.4rem;
-  text-align: center;
+  /* text-align: center; */
   margin: auto 30px;
 }
 
@@ -182,5 +184,5 @@ nav li a:hover {
 .copyright {
   font-family: 'Inconsolata', monospace;
   margin-bottom: 30px;
-  margin-top: 20rem;
+  /* margin-top: 20rem; */
 }
