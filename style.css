@@ -11,6 +11,7 @@
   --yellow-sun: #fff936;
   --pink-hover: #fe80d5;
   --orange-hover: #ffb306;
+  --menu-hover: #ea5f84;
 }
 
 /* HEADER */
@@ -45,6 +46,10 @@ nav li {
 nav li a {
   text-decoration: none;
   color: var(--font-paleblack);
+}
+
+nav li a:hover {
+  color: var(--menu-hover);
 }
 
 .menu-icon {
@@ -143,9 +148,39 @@ nav li a {
   color: var(--font-paleblack);
   font-size: 24px;
   text-transform: lowercase;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   font-family: 'Inconsolata', monospace;
   letter-spacing: 0.4rem;
   margin: 250px 30px;
   text-align: center;
+}
+
+.contact-heading a {
+  text-decoration: none;
+  color: var(--font-paleblack)
+}
+
+.contact-heading a:hover {
+  color: var(--pink-hover)
+}
+
+.fa-github {
+  font-size: 24px;
+  color: var(--font-paleblack);
+  text-align: center;
+  padding: 15px 10px;
+}
+
+.fa-github:hover {
+  color: var(--pink-hover);
+}
+
+.fa-heart {
+  color: pink;
+}
+
+.copyright {
+  font-family: 'Inconsolata', monospace;
+  text-align: center;
+  margin: 0;
 }

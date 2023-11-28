@@ -27,7 +27,7 @@ let textTimeout; // globalna premenna na uchovanie referencie na setTimeOut
 
 const textUniversalFunction = (element, headingText) => {
   let index = 0;
-  element.textContent = ''; // posledny pokus - vymaze text
+  element.textContent = ''; // vymaze text
 
   const displayText = () => {
     if (index < headingText.length) {
@@ -40,7 +40,7 @@ const textUniversalFunction = (element, headingText) => {
   displayText(); // Spusti funkciu pri načtení stránky
 };
 
-// posledny pokus - pridavam stopku
+// pridavam stopku
 
 const stopTextAnimation = () => {
   if (textTimeout) {
