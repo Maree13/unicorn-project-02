@@ -138,22 +138,24 @@ nav li a:hover {
 
 /**************** CONTACT ****************/
 
-
 .main-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
   min-height: calc(100vh - 70px);
 }
-
 
 .contact-heading {
   color: var(--font-paleblack);
   font-size: 24px;
   text-transform: lowercase;
-  padding-bottom: 30px;
   font-family: 'Inconsolata', monospace;
   letter-spacing: 0.4rem;
-  margin: 250px 30px;
   text-align: center;
+  margin: auto 30px;
 }
+
 
 .contact-heading a {
   text-decoration: none;
@@ -167,8 +169,6 @@ nav li a:hover {
 .fa-github {
   font-size: 24px;
   color: var(--font-paleblack);
-  text-align: center;
-  padding: 15px 10px;
 }
 
 .fa-github:hover {
@@ -181,6 +181,6 @@ nav li a:hover {
 
 .copyright {
   font-family: 'Inconsolata', monospace;
-  text-align: center;
-  margin: 0;
+  margin-bottom: 30px;
+  margin-top: 20rem;
 }
