@@ -155,7 +155,7 @@ nav li a:hover {
   text-transform: lowercase;
   font-family: 'Inconsolata', monospace;
   letter-spacing: 0.4rem;
-  /* text-align: center; */
+  text-align: center;
   margin: auto 30px;
 }
 
