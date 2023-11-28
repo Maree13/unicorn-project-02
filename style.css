@@ -77,6 +77,7 @@ nav li a:hover {
   padding-bottom: 50px;
   margin-left: 30px;
   margin-right: 30px;
+  text-align: center;
   font-family: 'Inconsolata', monospace;
   letter-spacing: 0.4rem;
 }
